@@ -38,14 +38,13 @@ const handler = NextAuth({
       return session;
     },
     async signIn({ profile }) {
-      
       try {
         await ConnectToDb();
         // if user already exist login
-        const userExisted = User.find({ email: profile.email });
+        User.find({ email: profile.email });
         // else create a new user
 
-        if (!userExisted) {
+        if (User.find({ email: profile.email })) {
           const newUser = new User({
             email: profile.email,
             username: profile.name
