@@ -1,10 +1,6 @@
 import Feed from "@components/Feed";
 
-/*import Form from "@components/Form";
 
-import Profile from "@components/profile";
-import PromptCard from "@components/PromptCard";
-import Provider from "@components/Provider";*/
 
 const Page = () => {
   return (
